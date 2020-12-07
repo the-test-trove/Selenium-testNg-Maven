@@ -1,4 +1,4 @@
-# Selenium-Java_BoilerCode
+# Selenium-testNg-Maven
 
 # Introduction
 This Test Automation Framework is created using Java + Selenium Web Driver + TestNG+ Maven Page Object Model(POM). Which can be used across different web based applications.It is used to make the code more readable, maintainable, and reusable.
@@ -10,12 +10,13 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 
  
 # Steps to clone execute the tests
- `git clone https://github.com/Shiwani01/Selenium-Java_BoilerCode.git` <br/>
- `cd Selenium-Java_BoilerCode`<br/>
- `mvn clean test`
+ `git clone https:https://github.com/the-test-trove/Selenium-testNg-Maven.git` <br/>
+ `cd Selenium-testNg-Maven`<br/>
+ `mvn clean install`
+ `mvn test`
  
 # Screenshot:
-* Take Screenshots On test failures screenshots will automatically be taken and stored under build/screenshots. The screenshot files will be named of the test       method name.
+* Take Screenshots On test failures Method will automatically capture & store the screenshots under /screenshots directory. The screenshot files will be named of the test method name.
 
 # Reporting: 
 * The framework produce index.html report. It resides in the same 'test-output. This reports gives the link to all the different component of the TestNG reports like Groups & Reporter Output. On clicking these will display detailed descriptions of execution.<br/>
