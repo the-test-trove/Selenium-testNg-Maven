@@ -32,7 +32,6 @@ public class SampleTest extends BaseClass {
 		sample.search(key);
 			Assert.assertTrue(true, "Test case Failed");
 			
-			
 			}
 
 }
