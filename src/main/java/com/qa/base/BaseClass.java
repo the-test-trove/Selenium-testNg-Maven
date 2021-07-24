@@ -1,6 +1,7 @@
 package com.qa.base;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 
@@ -29,6 +30,24 @@ public class BaseClass extends Utility {
 
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+		} else {
+			/*
+			This is linux chrome driver, for other operating systems please download respective chrome drivers.
+			* */
+				System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("addArguments");
+				options.addArguments("--window-size=1920,1080");
+				options.addArguments("--headless");
+				//options.addArguments("start-maximized");
+				options.addArguments("disable-infobars");
+				//options.addArguments("--disable-extensions");
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--disable-browser-side-navigation");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-gpu");
+				driver = new ChromeDriver(options);
 		}
 
 		driver.manage().window().maximize();
