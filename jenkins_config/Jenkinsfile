@@ -15,7 +15,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']],
-                userRemoteConfigs: [[url: 'https://github.com/swjadhav/Selenium-testNg-Maven.git']]])
+                userRemoteConfigs: [[url: 'https://github.com/the-test-trove/Selenium-testNg-Maven.git']]])
 
             }
          }
